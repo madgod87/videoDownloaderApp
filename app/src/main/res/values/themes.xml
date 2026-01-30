@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MediaAnalyzer" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">#673AB7</item>
+        <item name="colorSecondary">#03DAC6</item>
+    </style>
+
+    <style name="Theme.MediaAnalyzer" parent="Base.Theme.MediaAnalyzer" />
+</resources>

@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "C:\\Users\\bdokr\\.gradle\\daemon\\9.0-milestone-1\\com.research.mediaanalyzer.app-merged_res-35:\\xml_file_paths.xml.flat",
+        "source": "C:\\Users\\bdokr\\.gradle\\daemon\\9.0-milestone-1\\com.research.mediaanalyzer.app-main-37:\\xml\\file_paths.xml"
+    },
+    {
+        "merged": "C:\\Users\\bdokr\\.gradle\\daemon\\9.0-milestone-1\\com.research.mediaanalyzer.app-merged_res-35:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\bdokr\\.gradle\\daemon\\9.0-milestone-1\\com.research.mediaanalyzer.app-main-37:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\bdokr\\.gradle\\daemon\\9.0-milestone-1\\com.research.mediaanalyzer.app-merged_res-35:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\bdokr\\.gradle\\daemon\\9.0-milestone-1\\com.research.mediaanalyzer.app-main-37:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\bdokr\\.gradle\\daemon\\9.0-milestone-1\\com.research.mediaanalyzer.app-merged_res-35:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\bdokr\\.gradle\\daemon\\9.0-milestone-1\\com.research.mediaanalyzer.app-main-37:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.research.mediaanalyzer.app-merged_res-35:/layout_activity_main.xml.flat",
+        "source": "com.research.mediaanalyzer.app-main-37:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.research.mediaanalyzer.app-merged_res-35:/layout_item_library.xml.flat",
+        "source": "com.research.mediaanalyzer.app-main-37:/layout/item_library.xml"
+    },
+    {
+        "merged": "C:\\Users\\bdokr\\.gradle\\daemon\\9.0-milestone-1\\com.research.mediaanalyzer.app-merged_res-35:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\bdokr\\.gradle\\daemon\\9.0-milestone-1\\com.research.mediaanalyzer.app-main-37:\\xml\\backup_rules.xml"
+    }
+]
