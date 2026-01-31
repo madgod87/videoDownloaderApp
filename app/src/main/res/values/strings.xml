@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">Media Analyzer</string>
-    <string name="analyze">Analyze</string>
-    <string name="url_hint">Paste public video URL here</string>
-    <string name="status_idle">Status: Idle</string>
+    <string name="app_name">FikFap Downloader</string>
+    <string name="analyze">ANALYZE</string>
+    <string name="url_hint">Paste research URL here...</string>
+    <string name="status_idle">Status: READY</string>
     <string name="status_analyzing">Status: Analyzing...</string>
     <string name="status_detected">Status: Media Stream Found</string>
     <string name="status_downloading">Status: Downloading...</string>

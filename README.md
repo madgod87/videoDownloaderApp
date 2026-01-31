@@ -1,30 +1,31 @@
-# Media Delivery Analysis Tool (Academic Research)
+# FikFap Downloader v4.4
 
-This Android application is designed to study how video media is delivered inside Progressive Web Apps (PWAs). It uses a combination of a local VPN service and a hidden WebView to analyze traffic patterns and detect media streams.
+A professional, high-performance Android media acquisition utility designed for modern research and data preservation. FikFap Downloader combines a secure VPN-based traffic analyzer with a robust background download engine to simplify the retrieval of HLS and direct media streams.
 
-## Core Components
+## 🚀 Key Features
 
-- **UI (`ui/MainActivity.kt`)**: URL input, analysis control, real-time logging, and download confirmation.
-- **WebView Module**: Intercepts requests triggered by page loading to identify media endpoints.
-- **Foreground Service (`service/AnalyzerForegroundService.kt`)**: Ensures persistent analysis according to Android background limits.
-- **VPN Layer (`vpn/TrafficVpnService.kt`)**: Demonstrates protocol-level monitoring using `VpnService`. Captures metadata (destination IPs, packet sizes) without TLS breaking.
-- **Detection Logic (`logic/MediaDetectionLogic.kt`)**: Classifies streams into Direct Media, Adaptive Streams (HLS/DASH), or DRM-protected content.
-- **HLS Downloader (`logic/HlsDownloader.kt`)**: Demonstrates the reconstruction of HLS streams by merging segments.
+- **Professional Light Theme**: A clean, high-contrast Material 3 interface designed for maximum readability and ease of use.
+- **Background Stability**: Downloads are handled by a dedicated Foreground Service, ensuring that operations are never interrupted by system events like incoming phone calls or app switching.
+- **Secured Media Library**: A centralized hub to manage your artifacts. Features high-quality video thumbnails and direct actions (Play, Share, Delete).
+- **Multi-Select Bulk Sharing**: Long-press any artifact in the library to enter targeting mode, allowing you to share multiple files simultaneously.
+- **Smart VPN Tunneling**: Automatically establishes a secure tunnel for traffic analysis and collapses it upon download completion to preserve battery and data.
+- **System Diagnostics**: Dedicated real-time console for monitoring network detections and engine status.
 
-## Research Objectives
+## 🛠️ Technology Stack
 
-1. **Protocol vs UI Security**: Shows that while a PWA might restrict the UI (e.g., hiding download buttons), the underlying network protocol still exposes media segments.
-2. **VPN Boundaries**: Demonstrates that without MitM (Man-in-the-Middle) and certificate pinning bypass, detailed request paths in HTTPS traffic remain opaque to a standard VPN, requiring app-level interception (WebView) for full path visibility.
-3. **DRM Identification**: Identifies the presence of cryptographic protection that prevents unauthorized decryption and downloading.
+- **Language**: Kotlin
+- **Networking**: Android VpnService & Traffic Interception
+- **Media Engine**: RxFFmpeg (for robust HLS/M3U8 processing)
+- **UI Components**: Material Design 3, CoordinatorLayout
+- **Image Loading**: Glide (for instant video thumbnails)
 
-## How to Build
+## 📦 How to Build
 
-1. Open the project in **Android Studio**.
-2. Sync Gradle dependencies.
-3. Build and Run on a device with **Android 10+ (API 29+)**.
+1. Clone the repository.
+2. Open in **Android Studio Bumblebee** or newer.
+3. Sync Gradle and build the `app-debug.apk`.
+4. Ensure the device has **Android 11+** for optimal Scoped Storage performance.
 
-## Mandatory User Action
+## ⚖️ Usage Note
 
-- Analysis only starts after the user enters a URL and taps **Analyze**.
-- Downloads ONLY proceed after **user confirmation** via a dialog.
-- No background automation or silent scraping is implemented.
+This tool is designed for educational and data preservation purposes. Always ensure you have the rights to the content you are analyzing or securing.

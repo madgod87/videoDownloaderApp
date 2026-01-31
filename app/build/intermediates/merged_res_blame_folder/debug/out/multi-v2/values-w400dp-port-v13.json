@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.research.mediaanalyzer.app-mergeDebugResources-33:/values-w400dp-port-v13/values-w400dp-port-v13.xml",
+            "outputFile": "com.fikfap.downloader.app-mergeDebugResources-35:/values-w400dp-port-v13/values-w400dp-port-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\bdokr\\.gradle\\caches\\9.0-milestone-1\\transforms\\c3a386cfef9b0e9cf0189b4e77ba6ee8\\transformed\\material-1.11.0\\res\\values-w400dp-port-v13\\values-w400dp-port-v13.xml",
+                    "source": "C:\\Users\\bdokr\\.gradle\\caches\\transforms-3\\84114cdc67145947aeae5617e585aba8\\transformed\\material-1.11.0\\res\\values-w400dp-port-v13\\values-w400dp-port-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

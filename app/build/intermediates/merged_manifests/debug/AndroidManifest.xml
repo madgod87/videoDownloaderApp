@@ -2,10 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.research.mediaanalyzer"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.1" >
 
     <uses-sdk
-        android:minSdkVersion="29"
+        android:minSdkVersion="24"
         android:targetSdkVersion="34" />
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -23,20 +23,15 @@
     <application
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-        android:dataExtractionRules="@xml/data_extraction_rules"
         android:debuggable="true"
         android:extractNativeLibs="false"
-        android:fullBackupContent="@xml/backup_rules"
         android:icon="@drawable/ic_launcher_foreground"
-        android:label="@string/app_name"
-        android:roundIcon="@drawable/ic_launcher_foreground"
-        android:supportsRtl="true"
+        android:label="FikFap Network Analyzer"
         android:testOnly="true"
         android:theme="@style/Theme.MediaAnalyzer" >
         <activity
-            android:name="com.research.mediaanalyzer.ui.MainActivity"
-            android:exported="true"
-            android:theme="@style/Theme.MediaAnalyzer" >
+            android:name="com.fikfap.downloader.MainActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -45,16 +40,7 @@
         </activity>
 
         <service
-            android:name="com.research.mediaanalyzer.service.AnalyzerForegroundService"
-            android:enabled="true"
-            android:exported="false"
-            android:foregroundServiceType="specialUse" >
-            <property
-                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
-                android:value="Media delivery analysis for academic research on PWA traffic patterns." />
-        </service>
-        <service
-            android:name="com.research.mediaanalyzer.vpn.TrafficVpnService"
+            android:name="com.fikfap.downloader.TrafficVpnService"
             android:enabled="true"
             android:exported="false"
             android:foregroundServiceType="specialUse"
@@ -63,10 +49,32 @@
                 <action android:name="android.net.VpnService" />
             </intent-filter>
         </service>
+        <service
+            android:name="com.fikfap.downloader.StreamAnalyzerService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="specialUse" >
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="Capturing media manifests for network traffic analysis." />
+        </service>
+        <service
+            android:name="com.fikfap.downloader.DownloadService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="specialUse" >
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="Handling heavy media segment downloads via FFmpeg." />
+        </service>
+
+        <activity
+            android:name="com.fikfap.downloader.LibraryActivity"
+            android:exported="false" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.research.mediaanalyzer.fileprovider"
+            android:authorities="com.research.mediaanalyzer.provider"
             android:exported="false"
             android:grantUriPermissions="true" >
             <meta-data

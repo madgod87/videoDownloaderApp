@@ -4,17 +4,21 @@ plugins {
 }
 
 android {
-    namespace 'com.research.mediaanalyzer'
+    namespace 'com.fikfap.downloader'
     compileSdk 34
 
     defaultConfig {
         applicationId "com.research.mediaanalyzer"
-        minSdk 29
+        minSdk 24
         targetSdk 34
         versionCode 1
-        versionName "1.0"
+        versionName "1.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        
+        ndk {
+            abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+        }
     }
 
     buildTypes {
@@ -49,6 +53,13 @@ dependencies {
 
     // OkHttp for network probes and downloads
     implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+    
+    // FFmpeg alternative: RxFFmpeg (still active on JitPack)
+    implementation 'com.github.microshow:RxFFmpeg:4.9.0-lite'
+    
+    // Glide for Thumbnails
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.16.0'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'

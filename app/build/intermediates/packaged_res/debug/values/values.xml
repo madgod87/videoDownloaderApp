@@ -1,19 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="analyze">Analyze</string>
-    <string name="app_name">Media Analyzer</string>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <color name="accent">#00BCD4</color>
+    <color name="bg_light">#F5F7FA</color>
+    <color name="black">#212121</color>
+    <color name="border_color">#E0E0E0</color>
+    <color name="console_bg">#1E1E1E</color>
+    <color name="console_text">#00E676</color>
+    <color name="error">#D32F2F</color>
+    <color name="primary">#2196F3</color>
+    <color name="primary_dark">#1976D2</color>
+    <color name="success">#388E3C</color>
+    <color name="surface_white">#FFFFFF</color>
+    <color name="text_main">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="white">#FFFFFF</color>
+    <string name="analyze">ANALYZE</string>
+    <string name="app_name">FikFap Downloader</string>
     <string name="notif_channel_name">Analysis Service</string>
     <string name="notif_content">Monitoring traffic for media delivery patterns...</string>
     <string name="notif_title">Analyzing Media Stream</string>
     <string name="status_analyzing">Status: Analyzing...</string>
     <string name="status_detected">Status: Media Stream Found</string>
     <string name="status_downloading">Status: Downloading...</string>
-    <string name="status_idle">Status: Idle</string>
-    <string name="url_hint">Paste public video URL here</string>
-    <style name="Base.Theme.MediaAnalyzer" parent="Theme.Material3.DayNight.NoActionBar">
+    <string name="status_idle">Status: READY</string>
+    <string name="url_hint">Paste research URL here...</string>
+    <style name="Base.Theme.MediaAnalyzer" parent="Theme.Material3.Light.NoActionBar">
         
-        <item name="colorPrimary">#673AB7</item>
-        <item name="colorSecondary">#03DAC6</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorSecondary">@color/accent</item>
+        <item name="android:windowBackground">@color/bg_light</item>
+        <item name="android:colorBackground">@color/bg_light</item>
+        <item name="colorSurface">@color/surface_white</item>
+        
+        
+        <item name="android:statusBarColor">@color/surface_white</item>
+        <item name="android:windowLightStatusBar" ns1:targetApi="m">true</item>
     </style>
     <style name="Theme.MediaAnalyzer" parent="Base.Theme.MediaAnalyzer"/>
 </resources>
